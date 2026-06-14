@@ -2,7 +2,7 @@
 
 Submitted by: **Samantha Placito Melendrez**
 
-This web app: **insert description**
+This web app: **Is an interactive flashcard set based off of space trivia. The users can click on the card to flip it and reveal the answer as well as press the next button to get a randomly selected card from the deck.**
 
 Time spent: **4** hours spent in total
 
@@ -41,7 +41,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/splacito12/Astronomy-Flashcards/blob/main/SpaceTrivia.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 [ScreenToGif](https://www.screentogif.com/) for Windows
 

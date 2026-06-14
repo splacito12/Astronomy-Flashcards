@@ -3,6 +3,7 @@ import Flashcard from "./Flashcard";
 import './App.css';
 
 const cards = [
+  {question: "Welcome!", answer: "If you are ready to start, press the 'next card' button bellow :D"},
   {question: "What is the largest Planet?", answer: "Jupiter"},
   {question: "What is a nebula?", answer:"A giant cloud of gas and dust in space. The birthplace of stars."},
   {question: "What are stars made of?", answer: "Stars are giant balls of hot gas – mostly hydrogen, with some helium and small amounts of other elements. "},
