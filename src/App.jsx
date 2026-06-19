@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Flashcard from "./Flashcard";
+import flashcard from "./flashcard";
 import './App.css';
 
 const cards = [
@@ -24,7 +24,14 @@ function App() {
   const currCard = cards[currIndex];
 
   function handleNext() {
-    const randIndex = Math.floor(Math.random() * cards.length);
+    // const randIndex = Math.floor(Math.random() * cards.length);
+    // setCurrIndex(randIndex);
+    // setIsFlipped(false);
+    let randIndex;
+    do {
+      randIndex = Math.floor(Math.random() * cards.length);
+    }while (randIndex === currIndex);
+
     setCurrIndex(randIndex);
     setIsFlipped(false);
   }

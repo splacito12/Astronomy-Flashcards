@@ -1,4 +1,4 @@
-function Flashcard({question, answer, isFlipped, onFlip}){
+function flashcard({question, answer, isFlipped, onFlip}){
     return(
         <div className="card-container" onClick={onFlip}>
             <div className={`card-inner ${isFlipped ? "flipped" : ""}`}>
@@ -15,4 +15,4 @@ function Flashcard({question, answer, isFlipped, onFlip}){
     );
 }
 
-export default Flashcard;
+export default flashcard;
