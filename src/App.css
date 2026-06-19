@@ -103,11 +103,16 @@ body {
   transform: rotateY(180deg);
 }
 
+.nav-btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .next-btn {
   background: rgba(255, 209, 102, 0.1);
-  border: 1.5px solid rgba(255, 209, 102, 0.5);
+  border: 0.5px solid rgba(255, 209, 102, 0.5);
   color: #ffd166;
-  padding: 0.75rem 2.5rem;
+  padding: 0.25rem 1rem;
   border-radius: 12px;
   font-size: 1rem;
   cursor: pointer;
@@ -115,6 +120,77 @@ body {
   font-family: 'Orbitron', sans-serif;
 }
 
-.next-btn:hover {
+.prev-btn {
+  background: rgba(255, 209, 102, 0.1);
+  border: 0.5px solid rgba(255, 209, 102, 0.5);
+  color: #ffd166;
+  padding: 0.25rem 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.next-btn:hover,
+.prev-btn:hover {
   background: rgba(255, 209, 102, 0.2);
+}
+
+.next-btn:disabled,
+.prev-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: rgba(255, 209, 102, 0.15);
+  color: rgba(255, 209, 102, 0.4)
+}
+
+.guess-box {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 560px;
+}
+
+.ans-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 209, 102, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  color: #f0f4ff;
+  font-size: 1rem;
+}
+
+.ans-input:focus {
+  outline: none;
+  border-color: #ffd166;
+}
+
+.submit-btn {
+  background: rgba(61, 68, 212, 0.3);
+  border: 1.5px solid #3d4464;
+  color: #f0f4ff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit-btn:hover {
+  background: rgba(61, 68, 212, 0.5);
+}
+
+.validation {
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.validation.correct {
+  color: #3db87a;
+}
+
+.validation.incorrect {
+  color: #e74c3c;
 }
