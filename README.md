@@ -45,7 +45,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/splacito12/Astronomy-Flashcards/blob/main/SpaceTrivia_unit3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 [ScreenToGif](https://www.screentogif.com/) for Windows
 
