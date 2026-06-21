@@ -194,3 +194,35 @@ body {
 .validation.incorrect {
   color: #e74c3c;
 }
+
+.shuffle-btn {
+  background: rgba(220, 176, 7.3, 0.05);
+  border: 1.5px solid rgba(220, 176, 7.3, 0.5);
+  color: #dcb049;
+  padding: 0.5rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  transition: background 0.2s ease;
+}
+
+.shuffle-btn:hover {
+  background: rgba(249, 217, 91, 0.25);
+}
+
+.Curr-streak {
+  display: flex;
+  gap: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  color: #dcb049;
+}
+
+.long-streak {
+  display: flex;
+  gap: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  color: #dcb049;
+}

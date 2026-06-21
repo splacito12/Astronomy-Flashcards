@@ -21,10 +21,18 @@ const cards = [
 function App() {
   const [currIndex, setCurrIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
-  const currCard = cards[currIndex];
+  //const currCard = cards[currIndex];
 
   const [guess, setGuess] = useState("");
   const [validation, setValidation] = useState(null);
+
+  //now for the shuffle button
+  const [deck, setDeck] = useState(cards);
+  const currCard = deck[currIndex];
+
+  //for keeping track of streak
+  const [currStreak, setCurrStreak] = useState(0);
+  const [longestStreak, setLongestStreak] = useState(0);
 
   //old handleNext()
   // function handleNext() {
@@ -63,9 +71,30 @@ function App() {
   function handleSubmitGuess() {
     if (guess.trim().toLowerCase() === currCard.answer.trim().toLowerCase()){
       setValidation("correct");
+      const newStreak = currStreak + 1;
+      setCurrStreak(newStreak);
+
+      if(newStreak > longestStreak) {
+        setLongestStreak(newStreak);
+      }
     } else{
       setValidation("incorrect");
+      setCurrStreak(0);
     }
+  }
+
+  function handleShuffle() {
+    const shuffled = [...deck];
+    for(let i = shuffled.length - 1; i > 0; i--){
+      const temp = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[temp]] = [shuffled[temp], shuffled[i]];
+    }
+
+    setDeck(shuffled);
+    setCurrIndex(0);
+    setIsFlipped(false);
+    setGuess("");
+    setValidation(null);
   }
 
   return (
@@ -74,6 +103,14 @@ function App() {
       <h1>Welcome to my Space Trivia</h1>
       <p>Test your knowledge of our lovely cosmos!</p>
       <p>Total Cards: {cards.length}</p>
+      </div>
+
+      <div className="Curr-streak">
+        <span>🔥 Current Streak: {currStreak}</span>
+      </div>
+
+      <div className="long-streak">
+        <span>🏆 Longest Streak: {longestStreak}</span>
       </div>
 
       <Flashcard
@@ -108,10 +145,14 @@ function App() {
           ⟵ Previous Card 
         </button>
 
-        <button className="next-btn" onClick={handleNext} disabled={currIndex === cards.length - 1}>
+        <button className="next-btn" onClick={handleNext} disabled={currIndex === deck.length - 1}>
           Next Card ⟶
         </button>
       </div>
+
+      <button className="shuffle-btn" onClick={handleShuffle}>
+        🔀 Shuffle
+      </button>
     </div>
   );
 }
